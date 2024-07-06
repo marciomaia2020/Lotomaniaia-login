@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Números Lotomania</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </head>
 <body>
-    <div id="formulario">
+    <div id="auth-forms">
         <form id="signup-form" class="auth-form">
             <h2>Criar Conta</h2>
             <label for="signup-username">Usuário:</label>
@@ -29,10 +29,10 @@
             <p>Não tem uma conta? <a href="#" onclick="showSignupForm()">Crie uma conta</a></p>
         </form>
     </div>
+
+
     <div class="container">
-
         <h1>Gerador de Números Lotomania</h1>
-
         <small>Escolha até 20 números fixos</small>
         <div class="number-selection" id="fixed-numbers">
             <label for="fixed-number-1">Número Fixo 1:</label>
@@ -45,6 +45,6 @@
         <div id="generated-numbers" class="numbers-display"></div>
         <div id="saved-games" class="numbers-display"></div>
     </div>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

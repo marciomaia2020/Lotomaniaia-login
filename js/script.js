@@ -1,4 +1,3 @@
-// script.js
 let savedGames = [];
 
 document.getElementById('signup-form').addEventListener('submit', function(event) {
@@ -105,7 +104,7 @@ function generateNumbers() {
     const availableNumbers = allNumbers.filter(num => !fixedNumbers.includes(num));
     const randomNumbers = [];
 
-    while (randomNumbers.length < 30) {  // Ajustado para gerar apenas 30 números aleatórios
+    while (randomNumbers.length < 30) {
         const randomIndex = Math.floor(Math.random() * availableNumbers.length);
         const number = availableNumbers.splice(randomIndex, 1)[0];
         randomNumbers.push(number);
