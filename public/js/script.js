@@ -3,8 +3,8 @@ let savedGames = [];
 
 document.getElementById('signup-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
     fetch('/signup', {
         method: 'POST',
@@ -18,7 +18,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
         if (data.success) {
             alert('Conta criada com sucesso!');
             document.getElementById('signup-form').reset();
-            showLoginForm();
         } else {
             alert('Erro ao criar conta: ' + data.message);
         }
@@ -27,43 +26,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
         console.error('Error:', error);
     });
 });
-
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
-
-    fetch('/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Login bem-sucedido!');
-            document.getElementById('login-form').reset();
-            // Implementar lógica adicional após login bem-sucedido
-        } else {
-            alert('Erro ao fazer login: ' + data.message);
-        }
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-});
-
-function showSignupForm() {
-    document.getElementById('signup-form').style.display = 'block';
-    document.getElementById('login-form').style.display = 'none';
-}
-
-function showLoginForm() {
-    document.getElementById('signup-form').style.display = 'none';
-    document.getElementById('login-form').style.display = 'block';
-}
 
 function addFixedNumberInput() {
     const fixedNumbersDiv = document.getElementById('fixed-numbers');

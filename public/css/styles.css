@@ -16,8 +16,8 @@ body {
     text-align: center;
 }
 
-.number-selection, .auth-form {
-    margin-bottom: 50px;
+.number-selection, #signup-form {
+    margin-bottom: 20px;
 }
 
 label {
@@ -48,8 +48,4 @@ button:hover {
 .numbers-display {
     margin-top: 20px;
     font-size: 1.2em;
-}
-
-.formulario{
-    align-items: center;
 }
